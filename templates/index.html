@@ -1,0 +1,25 @@
+<html>
+    <body style="background-color:rgb(41, 43, 43);">
+
+    </body>
+<head>
+    <h1 style="color: aliceblue;">
+        dette er forsiden <br>
+        hey hvordan har du det
+    </h1>
+    <a href="/side1" class ="app-link" style="background-color: aliceblue;" >
+        bibloteket
+    </a>
+    <br>
+    <a href="/search" class="app-link" style="background-color: aliceblue;">
+        search
+    </a>
+    <ul>
+         {% for item in items %}
+          <li>{{ item[1] }} ({{ item[2]}} ) </li>
+        {% endfor %}
+  </ul>
+
+
+</head>
+<html>

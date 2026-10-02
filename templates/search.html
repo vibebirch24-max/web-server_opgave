@@ -1,0 +1,27 @@
+        <h1>Brugerdatabase</h1>
+        <form method="post" action="">
+          <input
+            type="text"
+            name="search_term"
+            placeholder="Search..."
+            required
+          />
+          <button type="submit">Search</button>
+        </form>
+        <div class="results">
+          {{ overskrift }}
+          {% if not fanfics %}
+          <p>No results found.</p>
+          {% endif %}
+          {% for item in fanfics %}
+          <details>
+            <summary>{{ item["title"] }}</summary>
+            <a href="/fanfic?file={{item['filename']}}">{{ item["filename"] }}</a>
+          </details>
+          {% endfor %}
+        </div>
+        <a href="/forside">
+          home
+        </a>
+      </header>
+    </div>
