@@ -62,6 +62,10 @@ def db_search(search_term):
 def get_unknowen_rider():
     return render_template ("unknown-rider.html", title="unknown-rider", members=[])
 
+@app.route ("/get_unknowen_rider_2")
+def get_unknowen_rider_2():
+    return render_template ("unknown-rider-2.html", title="unknown-rider-2", members=[])
+
 
 if __name__=="__main__":
     app.run(host="0.0.0.0", port= 8080, debug=True)
